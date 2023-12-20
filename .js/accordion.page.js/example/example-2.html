@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example 2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+  </head>
+  <body>
+    <div class="row">
+      <div class="col-6">
+        <!-- Akordion yapısını oluşturmak için div içerisinde id verilmesi gerekiyor. -->
+        <div id="example"></div>
+      </div>
+      <div class="col-6">
+        <!-- Diğer içerikler -->
+      </div>
+      <!-- Diğer içerikler -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="../dist/accordion.page.min.js"></script>
+
+    <script type="text/javascript">
+      const title = "Example 2";
+      const data = [
+        {
+          title: "Accordion Item #1",
+          contents: [
+            {
+              text: "This is the first item's accordion body. It is shown by default...",
+              pdf: "https://www.buds.com.ua/images/Lorem_ipsum.pdf",
+              video: "https://www.youtube.com/embed/7X8II6J-6mU?si=HGnpysP4PRy3Gdsp",
+            },
+          ],
+        },
+        {
+          title: "Accordion Item #2",
+          contents: [
+            {
+              text: "This is the second item's accordion body. It is hidden by default...",
+              pdf: "https://www.buds.com.ua/images/Lorem_ipsum.pdf",
+              video: "https://www.youtube.com/embed/7X8II6J-6mU?si=HGnpysP4PRy3Gdsp",
+            },
+            {
+              text: "This is the second item's accordion body. It is hidden by default...",
+              pdf: "https://www.buds.com.ua/images/Lorem_ipsum.pdf",
+              video: "https://www.youtube.com/embed/7X8II6J-6mU?si=HGnpysP4PRy3Gdsp",
+            },
+          ],
+        },
+      ];
+      
+      const page = new AccordionPage();
+      page.setData(data);
+      page.setTitle(title);
+      page.setTargetId("example")
+      page.init();
+    </script>
+  </body>
+</html>
